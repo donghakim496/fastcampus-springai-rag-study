@@ -124,6 +124,7 @@ public class RagConfig {
 
         return documentRetrieverBuilder.build();
     }
+
     @ConditionalOnProperty(prefix = "app.cli", name = "enabled", havingValue = "true")
     @Bean
     public DocumentPostProcessor printDocumentsPostProcessor() {
@@ -150,7 +151,5 @@ public class RagConfig {
             return documents;
         };
     }
-
-
 
 }

@@ -32,7 +32,7 @@ public class LengthTextSplitter extends TextSplitter {
         while(position < textLength) {
             int end = Math.min(position + chunkSize, textLength);
             chunks.add(text.substring(position, end));
-            int nextPosition = end + chunkOverlap;
+            int nextPosition = end - chunkOverlap;
             if (nextPosition <= position) {
                 break;
             }
